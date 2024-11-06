@@ -1,0 +1,25 @@
+.card{
+    width: 95%;
+    margin: 15px auto;
+}
+.tarjetas{
+    display:block;
+}
+.btn{
+    margin-left:10px;
+    float: right;
+}
+.form-check-label{
+    font-size: 30px;
+}
+
+/*Eliminar flechas de input tipo número*/ 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
