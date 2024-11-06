@@ -9,19 +9,19 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="style-forms.css">
-        <title>Formulario de Pago</title>
+        <title>Payment form example</title>
     </head>
     <body>
         <div class="card">
-            <h5 class="card-header">Formulario de Pago</h5>
+            <h5 class="card-header">Payment form example</h5>
             <div class="card-body">
                 <div class="alert alert-danger" role="alert">
-                    Falta completar algunos campos
+                    Some  fields are missing
                     </div>
                 <form action="https://formspree.io/ishe.misa@gmail.com" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-5">
-                            <label for="inputCard">Número de Tarjeta</label>
+                            <label for="inputCard">Card #</label>
                             <input type="text" class="form-control"  id="inputCard" 
                             placeholder="XXXXXXXXXXXXXXXXXX"  maxlength="18" pattern="[0-9]{18}" 
                             title="Sólo puedes ingresar números" name="card" required>
@@ -29,48 +29,52 @@
                         <div class="form-group col-md-3">
                             <label for="inputCVC">CVC</label>
                             <input type="text" class="form-control" id="inputCVC" placeholder="000" 
-                            maxlength="3" pattern="[0-9]{3}" title="Sólo puedes ingresar números" 
+                            maxlength="3" pattern="[0-9]{3}" title="000000" 
                             name= "cvc" required>
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="inputAmount">Valor</label>
-                            <input type="number" class="form-control" id="inputAmount" 
-                            placeholder="Ingrese un valor" name="monto" required>
+                            <label for="inputAmount">Amount</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><strong>$</strong></span>
+                                </div>
+                                <input type="number" class="form-control" id="inputAmount" placeholder="Amount" name="monto" required>
+                            </div>
                         </div>
                     </div>
                     <div class="form-row">
                             <div class="form-group col-md">
-                                <label for="inputName">Nombre</label>
+                                <label for="inputName">First Name</label>
                                 <input type="text" class="form-control" id="inputName" placeholder=""
                                 name="nombre" required>
                             </div>
                             <div class="form-group col-md">
-                                <label for="inputLastname">Apellido</label>
+                                <label for="inputLastname">Last Name</label>
                                 <input type="text" class="form-control" id="inputLastname" placeholder=""
                                 name="apellido" required>
                             </div>
                         </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="inputCity">Ciudad</label>
+                            <label for="inputCity">City</label>
                             <input type="text" class="form-control" id="inputCity" name="ciudad" required>
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="inputState">Estado</label>
+                            <label for="inputState">State</label>
                             <select id="inputState" class="form-control" name="estado">
-                                <option selected>Seleccione un estado...</option>
+                                <option selected>Pick a state</option>
                                 <option value="ejemplo">...</option>
                             </select>
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="inputZip">Código Postal</label>
+                            <label for="inputZip">Postal code </label>
                             <input type="text" class="form-control" id="inputZip" maxlength="10" 
                             name="codigoPostal" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-3">
-                                <label class="tarjetas" for="">Aceptamos:</label>
+                                <label class="tarjetas" for="">We accept:</label>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="tipoTarjeta" 
                                 id="inlineRadio1" value="mc" required>
@@ -103,17 +107,17 @@
                         <div class="form-group col-md-3">    
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="exampleFormControlTextarea1">Comentario</label>
+                            <label for="exampleFormControlTextarea1">Message</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">   
                             </textarea>
                             <small id="comentarioHelpBlock" class="form-text text-muted">
-                            Ingrese algún comentario
+                            add any notes here.
                             </small>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="submit" class="btn btn-primary">Send</button>
                 </form>
-            <a href="#" class="btn btn-secondary">Cancelar</a>
+            <a href="#" class="btn btn-secondary">Cancel</a>
             </div>
         </div>
     <!-- Optional JavaScript -->
