@@ -1,0 +1,13 @@
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* Espacio entre el símbolo y el input */
+}
+
+.currency-symbol {
+  font-size: 1.2rem;       /* Tamaño del símbolo */
+  color: #111;             /* Color muy oscuro */
+  font-weight: bold;       /* Negrita adicional */
+  position: relative;
+  top: -3px;               /* Ajuste vertical del símbolo */
+}
